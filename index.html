@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17324d">
+  <meta name="description" content="2枚のタイルを入れ替えて、3つの模様を静かに整える短いパズルゲーム。">
+  <title>ととのえる</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="site-header" aria-label="ととのえる">
+      <div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+      <p class="eyebrow">ひと息ぶんのパズル</p>
+      <h1>ととのえる</h1>
+    </header>
+
+    <section id="start-screen" class="panel start-panel" aria-labelledby="start-title">
+      <div class="intro-copy">
+        <h2 id="start-title">3つ整えたら、おしまい。</h2>
+        <p>タイルを2枚ずつ選んで、見本と同じ並びにします。</p>
+      </div>
+
+      <fieldset class="difficulty-picker">
+        <legend>むずかしさ</legend>
+        <label class="difficulty-option">
+          <input type="radio" name="difficulty" value="easy" checked>
+          <span class="difficulty-card">
+            <strong>やさしい</strong>
+            <small>2 × 2</small>
+          </span>
+        </label>
+        <label class="difficulty-option">
+          <input type="radio" name="difficulty" value="normal">
+          <span class="difficulty-card">
+            <strong>ふつう</strong>
+            <small>3 × 3</small>
+          </span>
+        </label>
+      </fieldset>
+
+      <button id="start-button" class="button button-primary button-wide" type="button">はじめる</button>
+      <p class="keyboard-note">キーボードでは Tab・矢印キーで移動、Enter または Space で選べます。</p>
+    </section>
+
+    <section id="game-screen" class="panel game-panel" aria-labelledby="game-title" hidden>
+      <div class="game-topline">
+        <div>
+          <p id="round-label" class="round-label">1問目 / 3問</p>
+          <h2 id="game-title">見本にそろえる</h2>
+        </div>
+        <p id="difficulty-label" class="difficulty-badge">やさしい</p>
+      </div>
+
+      <div class="progress-track" aria-hidden="true">
+        <span id="progress-1"></span><span id="progress-2"></span><span id="progress-3"></span>
+      </div>
+
+      <section class="reference-area" aria-labelledby="reference-title">
+        <div class="section-heading">
+          <h3 id="reference-title">見本</h3>
+          <p>この並びへ</p>
+        </div>
+        <div id="target-board" class="target-board" aria-label="見本の並び"></div>
+      </section>
+
+      <section class="play-area" aria-labelledby="play-title">
+        <div class="section-heading">
+          <h3 id="play-title">いまの並び</h3>
+          <p id="move-guidance">入れ替える2枚を選びます</p>
+        </div>
+        <div id="game-board" class="game-board" role="group" aria-label="並べ替えるタイル"></div>
+      </section>
+
+      <div id="round-complete" class="round-complete" role="status" hidden>
+        <div class="complete-symbol" aria-hidden="true">✓</div>
+        <div>
+          <strong>整いました</strong>
+          <p>ひと息ついて、次へ。</p>
+        </div>
+        <button id="next-button" class="button button-primary" type="button">次の問題</button>
+      </div>
+
+      <div class="tool-row" aria-label="パズルの操作">
+        <button id="hint-button" class="button button-secondary" type="button">
+          <span aria-hidden="true">◎</span> ヒント
+        </button>
+        <button id="undo-button" class="button button-secondary" type="button" disabled>
+          <span aria-hidden="true">↶</span> 1手戻す
+        </button>
+        <button id="reset-button" class="button button-secondary" type="button">
+          <span aria-hidden="true">↺</span> 最初からやり直す
+        </button>
+      </div>
+      <p id="status-message" class="status-message" aria-live="polite">1枚目を選んでください。</p>
+    </section>
+
+    <section id="end-screen" class="panel end-panel" aria-labelledby="end-title" hidden>
+      <div class="settled-mark" aria-hidden="true">
+        <span>○</span><span>△</span><span>□</span>
+      </div>
+      <p class="end-kicker">3つ、整いました。</p>
+      <h2 id="end-title">おしまい。<br>ちょっと戻れそう？</h2>
+      <p id="end-message">ここが今日の区切りです。</p>
+      <div id="end-actions" class="end-actions">
+        <button id="finish-button" class="button button-finish" type="button">ここで終わる</button>
+        <button id="replay-button" class="button button-quiet" type="button">もう一度</button>
+      </div>
+    </section>
+  </main>
+
+  <noscript>このゲームを遊ぶには、ブラウザのJavaScriptを有効にしてください。</noscript>
+  <script src="logic.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
