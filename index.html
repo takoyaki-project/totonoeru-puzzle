@@ -2,10 +2,31 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HE8F2XKJS6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-HE8F2XKJS6");
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#17324d">
-  <meta name="description" content="2枚のタイルを入れ替えて、3つの模様を静かに整える短いパズルゲーム。">
-  <title>ととのえる</title>
+  <meta name="description" content="2枚のタイルを入れ替えて見本と同じ模様に整える、1〜3分の短いパズルゲーム。3問で必ず終わります。">
+  <meta name="author" content="TAKOYAKI PROJECT">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:title" content="ととのえる | TAKOYAKI PROJECT">
+  <meta property="og:description" content="2枚を入れ替えて、見本と同じ並びへ。3つ整えたらおしまいの短いパズルです。">
+  <meta property="og:url" content="https://takoyaki-project.github.io/totonoeru-puzzle/">
+  <meta property="og:image" content="https://takoyaki-project.github.io/totonoeru-puzzle/ogp.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="2枚のタイルを入れ替えるミニパズル「ととのえる」">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://takoyaki-project.github.io/totonoeru-puzzle/ogp.png">
+  <title>ととのえる | TAKOYAKI PROJECT</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -108,6 +129,11 @@
         <button id="replay-button" class="button button-quiet" type="button">もう一度</button>
       </div>
     </section>
+
+    <footer class="site-footer">
+      <p>TAKOYAKI PROJECT</p>
+      <p>このサイトでは、アクセス状況の把握のためGoogle Analyticsを使用しています。</p>
+    </footer>
   </main>
 
   <noscript>このゲームを遊ぶには、ブラウザのJavaScriptを有効にしてください。</noscript>

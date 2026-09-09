@@ -431,6 +431,21 @@ input:focus-visible + .difficulty-card {
 
 .button-finish { min-height: 3.5rem; font-size: 1.05rem; }
 
+.site-footer {
+  padding: 1.25rem 0.75rem 0;
+  color: var(--muted);
+  font-size: 0.75rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.site-footer p { margin: 0.15rem 0; }
+
+.site-footer p:first-child {
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
 @keyframes settle-in {
   from { opacity: 0; transform: translateY(10px) scale(0.985); }
   to { opacity: 1; transform: translateY(0) scale(1); }

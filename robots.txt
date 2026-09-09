@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://takoyaki-project.github.io/totonoeru-puzzle/sitemap.xml
