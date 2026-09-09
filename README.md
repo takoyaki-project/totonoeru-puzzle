@@ -1,7 +1,10 @@
 # ととのえるパズル
 
+![「ととのえる」OGP画像](assets/ogp.png)
+
 「ととのえる」は、2枚のタイルを入れ替えて見本と同じ模様にする、1〜3分ほどのブラウザ向けパズルです。1回につき3問で必ず終わります。タイマー、点数、連続記録などはありません。
-https://takoyaki-project.github.io/totonoeru-puzzle/
+
+[ブラウザで遊ぶ](https://takoyaki-project.github.io/totonoeru-puzzle/)
 
 ## 起動方法
 
